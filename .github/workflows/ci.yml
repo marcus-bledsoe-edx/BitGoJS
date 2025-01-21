@@ -12,7 +12,7 @@ on:
 
 jobs:
   unit-test:
-    runs-on: ubuntu-latest
+    runs-on: arm-4
 
     strategy:
       fail-fast: false
@@ -94,7 +94,7 @@ jobs:
       #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   browser-test:
-    runs-on: ubuntu-22.04
+    runs-on: arm-4
 
     steps:
       - uses: actions/checkout@v4
@@ -186,7 +186,7 @@ jobs:
           BITGOJS_TEST_PASSWORD: ${{ secrets.BITGOJS_TEST_PASSWORD }}
 
   docker-build:
-    runs-on: ubuntu-latest
+    runs-on: arm-4
 
     steps:
       - uses: actions/checkout@v4
